@@ -17,6 +17,7 @@
 \usepackage[UKenglish]{babel}
 \usepackage[UKenglish]{isodate}
 \usepackage{fontspec,xltxtra,xunicode}
+\usepackage{tikz}
 
 % Color definitions
 \definecolor{date}{HTML}{666666} 
@@ -44,13 +45,13 @@ Last Updated on
 \newcommand{\namesection}[3]{
 	\centering{
 		\sffamily
-		\fontspec[Path = fonts/lato/]{Lato-Hai}\fontsize{40pt}{10cm}\selectfont #1 
-		\fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #2
+		\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{45pt}{10cm}\selectfont #1 
+%		\fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #2
 	} \\
 	\vspace{5pt}
-	\centering{ \color{headings}\fontspec[Path = fonts/lato/]{Lato-Hai}\fontsize{11pt}{14pt}\selectfont #3}
+	\centering{ \color{headings}\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{11pt}{14pt}\selectfont #2} \\
 	\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
-	\vspace{-15pt}
+	\vspace{-10pt}
 }
 \titlespacing{\section}{0pt}{0pt}{0pt}
 
@@ -74,9 +75,29 @@ Last Updated on
 
 % Section seperators command
 \newcommand{\sectionsep}[0]{\vspace{8pt}}
+\newcommand{\sectionsepextra}[0]{\vspace{5pt}}
+
+% Title and Description separator command
+\newcommand{\descriptsep}[0]{\vspace{\topsep}}
 
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{\vspace{-\topsep}\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt}{\end{itemize}\vspace{-\topsep}}
+
+% Text Bubbles
+
+\newcommand\bubble[2][]{\tikz[overlay]\node[draw, fill=white, rectangle, rounded corners=1.5mm, font=\small, right=0mm, minimum height=6.4mm, inner sep=5pt] {#2};\phantom{#2}}
+
+%\newcommand{\tikzmark}[1]{\tikz[overlay,remember picture] \node (#1) {};}
+
+%\newcommand*{\LabelText}[3]{%
+%\tikzmark{a}#1\tikzmark{b}%
+%\begin{tikzpicture}[overlay,remember picture]
+%%    \path (a.north) -- (b.north) node [yshift=3.0ex, midway,rectangle,draw=#3,rounded corners=2pt,inner sep=1pt,fill=-#3]  {#2\strut};
+%\end{tikzpicture}%
+%}
+%
+%\newcommand*{\noun}[1]{\LabelText{#1}{noun}{red}}
+%\newcommand*{\adjective}[1]{\LabelText{#1}{adjective}{blue}}
 
 
 %%%%%%%%%%%%%%%%%%%%
