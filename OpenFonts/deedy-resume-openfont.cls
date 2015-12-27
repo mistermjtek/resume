@@ -45,7 +45,7 @@ Last Updated on
 \newcommand{\namesection}[3]{
 	\centering{
 		\sffamily
-		\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{45pt}{10cm}\selectfont #1 
+		\scshape\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{50pt}{10cm}\selectfont #1 
 %		\fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #2
 	} \\
 	\vspace{5pt}
