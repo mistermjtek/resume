@@ -9,7 +9,18 @@
 \LoadClass{article}
 
 % Package Imports
-\usepackage[hmargin=1.25cm, vmargin=0.7cm]{geometry}
+\usepackage
+[
+% other options: a3paper, a5paper, etc
+        left=1cm,
+        right=1.25cm,
+        top=1cm,
+        bottom=0.7cm
+        % use vmargin=2cm to make vertical margins equal to 2cm.
+        % us  hmargin=3cm to make horizontal margins equal to 3cm.
+        % use margin=3cm to make all margins  equal to 3cm.
+]
+{geometry}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{hyperref}
 \usepackage{titlesec}
@@ -42,18 +53,19 @@ Last Updated on
 \end{textblock}}
 
 % Name command
-\newcommand{\namesection}[3]{
-	\centering{
-		\sffamily
-		\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{45pt}{10cm}\selectfont #1 
-%		\fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #2
-	} \\
-	\vspace{5pt}
-	\centering{ \color{headings}\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{11pt}{14pt}\selectfont #2} \\
-	\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
-	\vspace{-10pt}
-}
-\titlespacing{\section}{0pt}{0pt}{0pt}
+%\newcommand{\namesection}[3]{
+%	\centering{
+%		\sffamily
+%		\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{45pt}{10cm}\selectfont #1 
+%%		\fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #2
+%	} \\
+%	\vspace{5pt}
+%	\centering{ \color{headings}\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{11pt}{14pt}\selectfont #2} \\
+%	\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+%	\vspace{-10pt}
+%}
+
+\titlespacing{\section}{0pt}{0pt}{3pt}
 
 % Headings command
 \titleformat{\section}{\color{headings}
@@ -64,17 +76,20 @@ Last Updated on
 \fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase}{}{0em}{}
 \titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
 \titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+
 \newcommand{\runsubsection}[1]{\color{subheadings}
-\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
+\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\raggedleft\uppercase {#1} \normalfont}
 
 % Descriptors command
 \newcommand{\descript}[1]{\color{subheadings}\raggedright\scshape\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
 
+
 % Location command
 \newcommand{\location}[1]{\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
 
+
 % Section seperators command
-\newcommand{\sectionsep}[0]{\vspace{8pt}}
+\newcommand{\sectionsep}[0]{\vspace{10pt}}
 \newcommand{\sectionsepextra}[0]{\vspace{5pt}}
 
 % Title and Description separator command
