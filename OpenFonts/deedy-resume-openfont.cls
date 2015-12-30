@@ -46,8 +46,9 @@
 \setlength{\TPHorizModule}{1mm}
 \setlength{\TPVertModule}{1mm}
 \textblockorigin{-5mm}{5mm} % start everyth
-\newcommand{\lastupdated}{\begin{textblock}{60}(154,260)
-\color{date}\fontspec[Path = fonts/raleway/]{Raleway-ExtraLight}\fontsize{8pt}{10pt}\selectfont 
+\newcommand{\lastupdated}{\begin{textblock}{60}(148,250)
+\color{date}\fontspec[Path = fonts/raleway/]{Raleway-ExtraLight}\fontsize{8pt}{10pt}\selectfont\raggedleft
+References available upon request\\
 Last Updated on
 \today
 \end{textblock}}
