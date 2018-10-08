@@ -45,7 +45,7 @@
 % Date command
 \setlength{\TPHorizModule}{1mm}
 \setlength{\TPVertModule}{1mm}
-\textblockorigin{-5mm}{5mm} % start everyth
+\textblockorigin{-5mm}{9mm} % start everyth
 \newcommand{\lastupdated}{\begin{textblock}{60}(148,250)
 \color{date}\fontspec[Path = fonts/raleway/]{Raleway-ExtraLight}\fontsize{8pt}{10pt}\selectfont\raggedleft
 References available upon request\\
@@ -83,6 +83,8 @@ Last Updated on
 
 % Descriptors command
 \newcommand{\descript}[1]{\color{subheadings}\raggedright\scshape\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
+
+\newcommand{\smalldescript}[1]{\color{subheadings}\raggedright\scshape\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{13pt}\selectfont {#1 \\} \normalfont}
 
 
 % Location command
